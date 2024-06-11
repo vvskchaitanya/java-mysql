@@ -1,6 +1,6 @@
-# Java MySQL Connection Tutorial
+# Java MySQL CRUD Tutorial
 
-Welcome to the **Java MySQL Connection Tutorial** repository! This project demonstrates how to connect a Java application to a MySQL database and perform basic CRUD (Create, Read, Update, Delete) operations. Whether you're a beginner or looking to brush up on your JDBC skills, this tutorial is designed to guide you through the process step by step.
+Welcome to the **Java MySQL CRUD Tutorial** repository! This project demonstrates how to connect a Java application to a MySQL database and perform basic CRUD (Create, Read, Update, Delete) operations. Whether you're a beginner or looking to brush up on your JDBC skills, this tutorial is designed to guide you through the process step by step.
 
 ## Features
 
