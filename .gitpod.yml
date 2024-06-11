@@ -5,4 +5,4 @@ tasks:
     - name: Setup Project
       command: |
         echo "Compiling Java files..."
-        javac -cp "JavaMysqlDatabase/lib/*" JavaMysqlDatabase/src/*.java -d bin
+        javac -cp "JavaMysqlDatabase/lib/*" JavaMysqlDatabase/src/**/*.java -d bin
