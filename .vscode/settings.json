@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": ["JavaMysqlDatabase/src/*"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "JavaMysqlDatabase/lib/mysql-connector-j-8.4.0.jar"
+    ]
+}
