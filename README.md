@@ -34,11 +34,11 @@ Before you begin, ensure you have the following:
 1. Install MySQL Server from the [official MySQL website](https://dev.mysql.com/downloads/mysql/).
 2. Create a new database:
     ```sql
-    CREATE DATABASE javaproject;
+    CREATE DATABASE fullstack;
     ```
 3. Create a `products` table:
     ```sql
-    USE javaproject;
+    USE fullstack;
     CREATE TABLE products (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
