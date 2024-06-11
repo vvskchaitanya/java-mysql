@@ -11,9 +11,19 @@ public class ProductsService {
     private static final String JDBC_USER = "user1";
     private static final String JDBC_PASSWORD = "password";
 
+    public ProductsService(){
+        // Load MySQL JDBC Driver During Intialization
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Unable to load the MySQL Connector Driver, Make sure you have java-mysql-connector library added to classpath");
+            e.printStackTrace();
+        }
+    }
+
 
     // Create
-    public static void create(String name, double price, int quantity) {
+    public void create(String name, double price, int quantity) {
         String sql = "INSERT INTO products (name, price, quantity) VALUES (?, ?, ?)";
         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -28,7 +38,7 @@ public class ProductsService {
     }
 
     // Read
-    public static void read() {
+    public void read() {
         String sql = "SELECT id, name, price, quantity FROM products";
         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -46,7 +56,7 @@ public class ProductsService {
     }
 
     // Update
-    public static void update(int id, String name, double price, int quantity) {
+    public void update(int id, String name, double price, int quantity) {
         String sql = "UPDATE products SET name = ?, price = ?, quantity = ? WHERE id = ?";
         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -62,7 +72,7 @@ public class ProductsService {
     }
 
     // Delete
-    public static void delete(int id) {
+    public void delete(int id) {
         String sql = "DELETE FROM products WHERE id = ?";
         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

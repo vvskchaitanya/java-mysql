@@ -4,11 +4,13 @@ public class JavaMysqlExample {
 
     public static void main(String[] args) {
 
+        ProductsService service = new ProductsService();
+
         // Add Product into Products Table
-        ProductsService.create("Laptop", 1200.50, 10);
+        service.create("Laptop", 1200.50, 10);
 
         // Read from the Products table
-        ProductsService.read();
+        service.read();
 
     }
 

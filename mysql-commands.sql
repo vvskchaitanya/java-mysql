@@ -4,7 +4,7 @@ GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT ON *.* TO 'user1'@'loc
 
 CREATE DATABASE fullstack;
 
-USE javaproject;
+USE fullstack;
 
 CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
